@@ -1,6 +1,6 @@
-# Parcial
+# Parcial 2 Arep
 
-#Autor:
+# Autor: David Arturo Narvaez Lossa
 
 ## Descripción del proyecto
 Diseñe, construya y despliegue un aplicación web para identificar si una cadena es una palíndromo o no
