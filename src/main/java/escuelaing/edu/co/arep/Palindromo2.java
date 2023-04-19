@@ -1,8 +1,9 @@
-package edu.eci.escuelaing.arep;
-import static spark.Spark.*;
+package escuelaing.edu.co.arep;
 
-public class Service1 {
+import static spark.Spark.get;
+import static spark.Spark.port;
 
+public class Palindromo2 {
     public static void main(String[] args) {
         port(getPort());
         get("/espalindromo",(req, res) -> {
@@ -12,17 +13,6 @@ public class Service1 {
         });
     }
 
-
-    public static Integer getPort(){
-        if (System.getenv("PORT") != null) {
-            return Integer.parseInt(System.getenv("PORT"));
-        }
-        return 4567;
-    }
-
-
-
-
     private static String answer(String input) {
         String changeWord = new StringBuilder(input).reverse().toString();
         if (changeWord.equals(input)) {
@@ -30,5 +20,12 @@ public class Service1 {
         } else {
             return "No es Palindromo";
         }
+    }
+
+    public static Integer getPort(){
+        if (System.getenv("PORT") != null) {
+            return Integer.parseInt(System.getenv("PORT"));
+        }
+        return 5002;
     }
 }
